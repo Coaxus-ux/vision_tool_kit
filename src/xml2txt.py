@@ -12,9 +12,6 @@ from pathlib import Path
 from rich.console import Console
 from rich.columns import Columns
 from rich.panel import Panel
-
-
-
 console = Console()
 style = style_from_dict({
     Token.Separator: '#cc5454',
@@ -124,9 +121,8 @@ def xml2txt():
     print(" ")
     console.print("Classes Found", style="bold red", justify="center")
     print(" ")
-    
+
     classes_found = [Panel(get_formatted_classes_quantity(classes), expand=True) for classes in classes_quantity]
     console.print(Columns(classes_found))
     print(" ")
     console.print("Everything was completed successfully...", style="bold green")
-    
